@@ -20,6 +20,9 @@ public class Product {
 
     }
 
+    public Product(String produto, BigDecimal preco, Integer quantidade) {
+    }
+
 
     public String getName() {
         return name;
