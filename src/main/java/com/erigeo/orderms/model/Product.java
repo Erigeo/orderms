@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.math.BigDecimal;
 
-@Document(collection = "products")
+
 public class Product {
 
-    private String name;
+    private String produto;
 
     private Integer quantity;
 
@@ -20,16 +20,19 @@ public class Product {
 
     }
 
-    public Product(String produto, BigDecimal preco, Integer quantidade) {
+    public Product(String produto, Integer quantidade, BigDecimal preco ) {
+        this.produto = produto;
+        this.quantity = quantidade;
+        this.price = preco;
     }
 
 
-    public String getName() {
-        return name;
+    public String getProduto() {
+        return produto;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProduto(String produto) {
+        this.produto = produto;
     }
 
     public Integer getQuantity() {
